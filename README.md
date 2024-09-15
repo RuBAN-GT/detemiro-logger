@@ -1,14 +1,16 @@
 # Detemiro Logger Project
 
-The project provides a generic logger library and a Nest.js logger wrapper 
+The project provides a generic logger library and a Nest.js logger wrapper
 helping to log messages in a structured way.
 
 ## Libraries
 
-The project provides:
+The project provides the following libraries:
 
-1. [libs/logger](./libs/logger) - the general logger library.
-2. [libs/nestjs](./libs/nestjs) - the Nest.js logger wrapper.
+| Library | Description | Version |
+| --- | --- | --- |
+| [detemiro-logger](./libs/logger) | The general logger library | [![npm version](https://badge.fury.io/js/detemiro-logger.svg)](https://badge.fury.io/js/detemiro-logger) |
+| [detemiro-logger-nestjs](./libs/nestjs) | The Nest.js logger wrapper | [![npm version](https://badge.fury.io/js/detemiro-logger-nestjs.svg)](https://badge.fury.io/js/detemiro-logger-nestjs) |
 
 ## Contributing
 

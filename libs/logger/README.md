@@ -1,5 +1,7 @@
 # Detemiro Logger Package
 
+[![npm version](https://badge.fury.io/js/detemiro-logger.svg)](https://badge.fury.io/js/detemiro-logger)
+
 The logger helps you to log messages in your application using `winston` under the hood. 
 It supports different logging levels and provides a flexible way to log messages.
 

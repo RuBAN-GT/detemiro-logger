@@ -1,5 +1,7 @@
 # Nest.js Logger Wrapper Package
 
+[![npm version](https://badge.fury.io/js/detemiro-logger-nestjs.svg)](https://badge.fury.io/js/detemiro-logger-nestjs)
+
 Detemiro Nest.js logger helps to integrate `detemiro-logger` into your Nest.js application.
 
 ## Installation
