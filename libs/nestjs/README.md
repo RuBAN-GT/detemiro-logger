@@ -30,6 +30,7 @@ import { NestLoggerModule } from 'detemiro-logger'
 })
 export class AppModule {}
 ```
+
 After that you have several options to use logger in your services.
 
 ### Using `NestLoggerService` directly
@@ -82,4 +83,34 @@ export class TestService {
     }
   }
 }
+```
+
+## Root logger
+
+Nest.js provides API to inject logger into general application context by modifying `bootstrap` function:
+
+```typescript
+import { NestLoggerService } from 'detemiro-logger-nestjs'
+import { NestFactory } from '@nestjs/core'
+import { AppModule } from './app.module'
+
+async function bootstrap(): Promise<void> {
+  const app = await NestFactory.create(AppModule)
+
+  const generalLogger = app.get(NestLoggerService)
+  app.useLogger(generalLogger)
+
+  await app.listen(3000)
+}
+bootstrap()
+```
+
+You will see logs from Nest.js in your logger format like:
+
+```bash
+[General] [info] [2024-09-29T07:20:16.556Z] HealthController {/}:
+[General] [info] [2024-09-29T07:20:16.559Z] Mapped {/healthz, GET} route
+[General] [info] [2024-09-29T07:20:16.559Z] Mapped {/readyz, GET} route
+[General] [info] [2024-09-29T07:20:16.560Z] Mapped {/metrics, GET} route
+[General] [info] [2024-09-29T07:20:16.563Z] Nest application successfully started
 ```
