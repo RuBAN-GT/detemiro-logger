@@ -1,1 +1,3 @@
-export const NEST_LOGGER_FACTORY = 'NestLoggerFactoryToken'
+const nestLoggerFactory = 'NestLoggerFactoryToken'
+
+export { nestLoggerFactory }

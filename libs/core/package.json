@@ -1,0 +1,30 @@
+{
+  "name": "detemiro-logger",
+  "version": "2.5.0",
+  "description": "The core logger for Detemiro projects utilizing different engines from separated packages.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
+  "author": "Dmitry Ruban",
+  "repository": "https://github.com/RuBAN-GT/detemiro-logger",
+  "license": "ISC",
+  "keywords": [
+    "logger"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.2",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.2.2"
+  }
+}

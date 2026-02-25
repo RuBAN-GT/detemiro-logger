@@ -1,29 +1,21 @@
-# Nest.js Logger Wrapper Package
+# Detemiro Nest.js Logger
 
-[![npm version](https://badge.fury.io/js/detemiro-logger-nestjs.svg)](https://badge.fury.io/js/detemiro-logger-nestjs)
-
-Detemiro Nest.js logger helps to integrate `detemiro-logger` into your Nest.js application.
+This package is a Nest.js wrapper around `detemiro-logger-node`.
 
 ## Installation
 
-You can install it using yarn or any other package manager:
+Install the required dependencies:
 
 ```bash
-yarn add detemiro-logger-nestjs
-```
-
-Don't forget to setup peer dependencies:
-
-```bash
-yarn add detemiro-logger
+yarn add detemiro-logger-nestjs detemiro-logger-node detemiro-logger
 ```
 
 ## Usage
 
-You have import `NestLoggerModule` into your root module:
+Import `NestLoggerModule` in your app root module:
 
 ```typescript
-import { NestLoggerModule } from 'detemiro-logger'
+import { NestLoggerModule } from 'detemiro-logger-nestjs'
 
 @Module({
   imports: [NestLoggerModule.forRoot()],
@@ -31,9 +23,14 @@ import { NestLoggerModule } from 'detemiro-logger'
 export class AppModule {}
 ```
 
-After that you have several options to use logger in your services.
+In `forRoot`, you can customize logger prefixes:
 
-### Using `NestLoggerService` directly
+- `application` - application name prefix.
+- `env` - environment name.
+
+After setup, there are several ways to use the logger.
+
+### Use `NestLoggerService` directly
 
 ```typescript
 import { NestLoggerService } from 'detemiro-logger-nestjs'
@@ -54,22 +51,19 @@ export class TestService {
 }
 ```
 
-### Using `loggerFactory` function
+### Use the factory token
 
-The library exposes `NEST_LOGGER_FACTORY` token that can be used
-to inject logger factory function into your service.
+The package exports the `nestLoggerFactory` token to inject a ready logger factory into your service.
 
 ```typescript
 import { LoggerService } from '@nestjs/common'
-import { NEST_LOGGER_FACTORY, NestLoggerFactory } from 'detemiro-logger-nestjs'
+import { NestLoggerFactory, nestLoggerFactory } from 'detemiro-logger-nestjs'
 
 @Injectable()
 export class TestService {
   protected readonly logger: LoggerService
 
-  constructor(
-    @Inject(NEST_LOGGER_FACTORY) loggerFactory: NestLoggerFactory,
-  ) {
+  constructor(@Inject(nestLoggerFactory) loggerFactory: NestLoggerFactory) {
     this.logger = loggerFactory('TestService')
   }
 
@@ -85,9 +79,9 @@ export class TestService {
 }
 ```
 
-## Root logger
+## Application-level logger
 
-Nest.js provides API to inject logger into general application context by modifying `bootstrap` function:
+Nest.js lets you register a logger for the whole app in `bootstrap`:
 
 ```typescript
 import { NestLoggerService } from 'detemiro-logger-nestjs'
@@ -105,7 +99,7 @@ async function bootstrap(): Promise<void> {
 bootstrap()
 ```
 
-You will see logs from Nest.js in your logger format like:
+You will see Nest.js logs in Detemiro logger format, for example:
 
 ```bash
 [General] [info] [2024-09-29T07:20:16.556Z] HealthController {/}:
