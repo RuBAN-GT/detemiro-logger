@@ -35,6 +35,6 @@
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "detemiro-logger": "^1.0.0"
+    "detemiro-logger": "^2.5.0"
   }
 }

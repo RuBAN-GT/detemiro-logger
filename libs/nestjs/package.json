@@ -40,8 +40,8 @@
     "@nestjs/common": ">= 10.0.0",
     "@nestjs/core": ">= 10.0.0",
     "@nestjs/schematics": ">= 10.0.0",
-    "detemiro-logger": ">= 1.0.0",
-    "detemiro-logger-node": ">= 1.0.0",
+    "detemiro-logger": ">= 2.5.0",
+    "detemiro-logger-node": ">= 2.5.0",
     "reflect-metadata": "^0.1.12",
     "rxjs": "^7.1.0"
   }
