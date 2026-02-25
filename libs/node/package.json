@@ -1,6 +1,6 @@
 {
   "name": "detemiro-logger-node",
-  "version": "2.0.0",
+  "version": "2.5.0",
   "description": "The Node.js logger (BE) for Detemiro projects.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

@@ -2,6 +2,11 @@
 
 `Detemiro Logger` is a set of logging libraries for different runtime environments.
 
+[![npm detemiro-logger](https://img.shields.io/npm/v/detemiro-logger?label=detemiro-logger)](https://www.npmjs.com/package/detemiro-logger)
+[![npm detemiro-logger-node](https://img.shields.io/npm/v/detemiro-logger-node?label=detemiro-logger-node)](https://www.npmjs.com/package/detemiro-logger-node)
+[![npm detemiro-logger-browser](https://img.shields.io/npm/v/detemiro-logger-browser?label=detemiro-logger-browser)](https://www.npmjs.com/package/detemiro-logger-browser)
+[![npm detemiro-logger-nestjs](https://img.shields.io/npm/v/detemiro-logger-nestjs?label=detemiro-logger-nestjs)](https://www.npmjs.com/package/detemiro-logger-nestjs)
+
 ## Project Structure
 
 The project contains several libraries:
