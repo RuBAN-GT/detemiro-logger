@@ -1,0 +1,40 @@
+{
+  "name": "detemiro-logger-node",
+  "version": "2.0.0",
+  "description": "The Node.js logger (BE) for Detemiro projects.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
+  "author": "Dmitry Ruban",
+  "keywords": [
+    "logger",
+    "winston"
+  ],
+  "repository": "https://github.com/RuBAN-GT/detemiro-logger",
+  "license": "ISC",
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch"
+  },
+  "dependencies": {
+    "@colors/colors": "^1.6.0",
+    "logform": "^2.7.0",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.2",
+    "detemiro-logger": "workspace:*",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "detemiro-logger": "^1.0.0"
+  }
+}

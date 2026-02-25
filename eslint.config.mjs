@@ -1,3 +1,3 @@
-import detemiroConfig from 'eslint-config-detemiro'
+import strictConfig from 'eslint-config-detemiro/configs/strict.mjs'
 
-export default detemiroConfig
+export default [...strictConfig]

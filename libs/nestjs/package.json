@@ -1,26 +1,21 @@
 {
   "name": "detemiro-logger-nestjs",
-  "version": "1.0.0",
-  "description": "The Nest.js logger wrapper over the generic logger library.",
+  "version": "2.0.0",
+  "description": "The Detemiro logger wrapper adapted to Nest.js DI.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "author": "Dmitry Ruban",
+  "repository": "https://github.com/RuBAN-GT/detemiro-logger",
+  "license": "ISC",
   "keywords": [
-    "nestjs",
     "logger",
     "winston",
-    "logform",
-    "colors"
+    "nestjs"
   ],
-  "author": "Dmitry Ruban",
-  "license": "ISC",
-  "homepage": "https://github.com/RuBAN-GT/detemiro-logger#readme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/RuBAN-GT/detemiro-logger.git"
-  },
   "files": [
     "dist",
     "README.md",
+    "CHANGELOG.md",
     "package.json"
   ],
   "scripts": {
@@ -33,13 +28,21 @@
     "@nestjs/schematics": "^10.0.3",
     "@swc/core": "^1.7.26",
     "@types/node": "^20.8.2",
-    "tsup": "^7.2.0",
+    "@types/uuid": "^9",
+    "detemiro-logger": "workspace:*",
+    "detemiro-logger-node": "workspace:*",
+    "reflect-metadata": "^0.1.14",
+    "rxjs": "^7.8.1",
+    "tsup": "^8.4.0",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "@nestjs/common": ">= 10.0.0",
     "@nestjs/core": ">= 10.0.0",
     "@nestjs/schematics": ">= 10.0.0",
-    "detemiro-logger": ">= 1.0.0"
+    "detemiro-logger": ">= 1.0.0",
+    "detemiro-logger-node": ">= 1.0.0",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^7.1.0"
   }
 }
