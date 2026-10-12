@@ -52,6 +52,12 @@ logger.info('Info Object %o', { hello: 'world' })
 logger.info('%o', { hello: 'world' })
 ```
 
+## Publishing
+
+Run the **Publish npm** GitHub Actions workflow on `master`, specifying the version already committed in all four library manifests. Dry-run mode is enabled by default; disable it explicitly to publish. Packages are published in dependency order, and already published versions are skipped when resuming a partial release.
+
+Configure an npm trusted publisher for each of `detemiro-logger`, `detemiro-logger-browser`, `detemiro-logger-node`, and `detemiro-logger-nestjs`: GitHub owner `RuBAN-GT`, repository `detemiro-logger`, workflow filename `publish.yml`. Leave the environment blank and allow direct `npm publish`. The workflow uses OIDC and provenance, without npm tokens or OTP codes.
+
 ## Contributing
 
 The `node-gyp@npm:latest` resolution keeps native build tooling compatible with Node 22.15. Revisit it when upgrading the minimum development Node version.
