@@ -54,6 +54,8 @@ logger.info('%o', { hello: 'world' })
 
 ## Contributing
 
+The `node-gyp@npm:latest` resolution keeps native build tooling compatible with Node 22.15. Revisit it when upgrading the minimum development Node version.
+
 I welcome contributions! Follow these steps to contribute:
 
 1. Setup environment
